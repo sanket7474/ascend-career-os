@@ -21,3 +21,21 @@ Rule: Every task is scoped to <= 60 minutes.
 | SETUP-013 | Create environment variable template files | 30 | SETUP-006 | Example env files created for backend/frontend with non-secret placeholders only. |
 | SETUP-014 | Validate local startup command sequence document | 30 | SETUP-006, SETUP-007, SETUP-008 | Written startup checklist exists and maps to compose services. |
 | SETUP-015 | Record Sprint 0 verification checklist in docs/tasks context | 25 | SETUP-010, SETUP-011, SETUP-014 | Checklist includes project runs locally, docker works, CI passes. |
+
+## Sprint 0 Verification Checklist
+
+- [ ] Frontend skeleton structure exists under `frontend/src/app/*`.
+- [ ] Backend package skeleton exists under `backend/src/main/java/com/ascend/*`.
+- [ ] Root `.gitignore` covers Node/Java/Docker/editor artifacts and env files.
+- [ ] `frontend/package.json` contains placeholder `start`, `build`, and `test` scripts.
+- [ ] `backend/pom.xml` contains baseline Spring Boot, Security, Data JPA, Flyway, PostgreSQL, and test dependencies.
+- [ ] `docker-compose.yml` defines `frontend`, `backend`, and `postgres` services with local port mappings.
+- [ ] Backend and frontend Dockerfile skeletons exist.
+- [ ] Flyway directory and initial migration SQL for users/roles/permissions are present.
+- [ ] CI workflow triggers on push/PR and runs frontend + backend build/test jobs.
+- [ ] Repository README includes quickstart prerequisites and local run commands.
+- [ ] Backend/frontend env template files exist with non-secret placeholders.
+- [ ] Local startup checklist maps commands to compose services.
+- [ ] Project runs locally.
+- [ ] Docker workflow works.
+- [ ] CI passes.
