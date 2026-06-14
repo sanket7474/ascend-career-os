@@ -1,0 +1,15 @@
+{
+  "name": "ascend-frontend",
+  "version": "0.1.0",
+  "private": true,
+  "description": "ASCEND Career OS frontend workspace (Sprint 0 skeleton)",
+  "scripts": {
+    "start": "echo \"TODO: wire Angular dev server\"",
+    "build": "echo \"TODO: wire Angular production build\"",
+    "test": "echo \"TODO: wire frontend test runner\""
+  },
+  "engines": {
+    "node": "22.x",
+    "npm": "10.x"
+  }
+}
