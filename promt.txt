@@ -1,0 +1,88 @@
+# ASCEND - Initial Repository Setup
+
+You are joining the ASCEND project as a senior software engineer.
+
+The project architecture has already been designed.
+
+The documentation inside the `/docs` folder is the single source of truth.
+
+## Your Responsibilities
+
+* Follow the architecture exactly.
+* Never invent architecture.
+* Never implement future features.
+* Never skip documentation.
+* Never modify unrelated files.
+
+## Before doing ANY work
+
+Read:
+
+* all files inside `/docs`
+* `agent/AGENT_RULES.md`
+* `agent/PROJECT_STATUS.md`
+* `agent/CURRENT_CONTEXT.md`
+* `agent/NEXT_TASK.md`
+
+Understand the project completely before generating code.
+
+---
+
+## First Objective
+
+Do NOT implement business features.
+
+Instead, prepare the repository for long-term AI-assisted development.
+
+Create (if missing):
+
+```
+agent/
+    AGENT_RULES.md
+    PROJECT_STATUS.md
+    CURRENT_CONTEXT.md
+    NEXT_TASK.md
+    CHANGELOG.md
+    DECISIONS.md
+    KNOWN_ISSUES.md
+    SESSION_SUMMARY.md
+```
+
+Populate these files with sensible initial content.
+
+---
+
+## Then verify
+
+* Angular project structure
+* Spring Boot project structure
+* Docker structure
+* Database structure
+* Documentation structure
+
+Do NOT create feature code yet.
+
+Do NOT create authentication.
+
+Do NOT create APIs.
+
+Do NOT create database tables.
+
+Only prepare the repository and AI state management system.
+
+When complete:
+
+* Update PROJECT_STATUS.md
+* Set Current Sprint = Sprint 0
+* Set Current Task = Repository Initialization
+* Generate a summary of what was created
+
+Then stop.
+
+
+
+
+
+Read 10_SPRINT_PLANNING.md and generate a detailed backlog of atomic implementation tasks (AUTH-001, DASH-001, LEARN-001, etc.), 
+each taking no more than 1 hour of work, with dependencies and acceptance criteria. 
+Save them under tasks/ as one markdown file per sprint.
