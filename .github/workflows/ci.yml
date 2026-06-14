@@ -1,0 +1,53 @@
+name: CI
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  frontend-build-test:
+    name: Frontend Build and Test
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+          cache: npm
+          cache-dependency-path: frontend/package.json
+
+      - name: Install frontend dependencies
+        run: npm --prefix frontend install
+
+      - name: Build frontend
+        run: npm --prefix frontend run build
+
+      - name: Test frontend
+        run: npm --prefix frontend run test
+
+  backend-build-test:
+    name: Backend Build and Test
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Java
+        uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: "21"
+          cache: maven
+
+      - name: Validate backend build setup
+        run: mvn -f backend/pom.xml -B validate
+
+      - name: Run backend tests
+        run: mvn -f backend/pom.xml -B test
